@@ -21,7 +21,6 @@ public class CacheServiceImpl implements CacheService {
     public Program getProgram(String programId) {
         Calendar calendar = Calendar.getInstance();
         Date time = calendar.getTime();
-//        System.out.println(time);
         logger.debug("I'm in getProgram method.{}",time);
         return new Program();
     }

@@ -1,6 +1,5 @@
 package com.vkea.sbs.controller;
 
-import com.github.benmanes.caffeine.cache.stats.CacheStats;
 import com.vkea.sbs.model.ProgramListResponse;
 import com.vkea.sbs.service.VideoService;
 import org.slf4j.Logger;
