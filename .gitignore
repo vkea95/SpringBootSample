@@ -1,0 +1,9 @@
+*.iml
+.idea
+.settings
+.classpath
+.project
+target/
+.mvn
+src/main/resources/application-local.properties
+.gradle/
