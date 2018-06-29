@@ -1,4 +1,4 @@
-package com.vkea.sbs;
+package com.vkea.sbs.config;
 
 import com.github.benmanes.caffeine.cache.Caffeine;
 import com.github.benmanes.caffeine.cache.Ticker;
@@ -21,6 +21,11 @@ public class CacheConfig {
     @Value("${cache.programDetail.expireAfterAccess}")
     private int pgExpireTime;
 
+//    @Bean
+//    public MeterRegistry meterRegistry(){
+//        return new PrometheusMeterRegistry();
+//    }
+
     @Bean
     public CacheManager cacheManager(Ticker ticker) {
 
@@ -42,6 +47,15 @@ public class CacheConfig {
                 .build());
     }
 
+//
+//    @Bean
+//    public CacheMetricsCollector cacheMetrics(CaffeineCache programDetailCache) {
+//        CacheMetricsCollector cacheMetrics = new CacheMetricsCollector().register();
+////        cacheMetrics
+//        cacheMetrics.addCache("programDetailLabel", programDetailCache.getNativeCache());
+//
+//        return cacheMetrics;
+//    }
 
     @Bean
     public Ticker ticker() {

@@ -22,6 +22,9 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
+        <metrics.version>0.5.1.RELEASE</metrics.version>
+        <prom.version>0.4.0</prom.version>
+        <swagger.version>2.9.2</swagger.version>
     </properties>
 
     <dependencies>
@@ -74,6 +77,107 @@
             <artifactId>caffeine</artifactId>
             <version>2.6.2</version>
         </dependency>
+        <!-- metrics stats data-->
+        <dependency>
+            <groupId>org.springframework.metrics</groupId>
+            <artifactId>spring-metrics</artifactId>
+            <version>${metrics.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>io.prometheus</groupId>
+            <artifactId>simpleclient_common</artifactId>
+            <version>${prom.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>io.prometheus</groupId>
+            <artifactId>simpleclient_hotspot</artifactId>
+            <version>${prom.version}</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/io.prometheus/simpleclient_dropwizard -->
+        <dependency>
+            <groupId>io.prometheus</groupId>
+            <artifactId>simpleclient_dropwizard</artifactId>
+            <version>${prom.version}</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/de.marcoaust.prometheus/spring-boot-prometheus -->
+        <dependency>
+            <groupId>de.marcoaust.prometheus</groupId>
+            <artifactId>spring-boot-prometheus</artifactId>
+            <version>0.2.0</version>
+        </dependency>
+        <!--<dependency>-->
+            <!--<groupId>io.prometheus</groupId>-->
+            <!--<artifactId>simpleclient_servlet</artifactId>-->
+            <!--<version>${prom.version}</version>-->
+        <!--</dependency>-->
+        <!--<dependency>-->
+            <!--<groupId>io.prometheus</groupId>-->
+            <!--<artifactId>simpleclient_httpserver</artifactId>-->
+            <!--<version>${prom.version}</version>-->
+        <!--</dependency>
+            <! -<groupId>io.prometheus</groupId> -->
+            <!--<artifactId>simpleclient_common</artifactId>-->
+            <!--<version>${prom.version}</version>-->
+        <!--</dependency>-->
+        <!--<dependency>-->
+            <!--<groupId>io.prometheus</groupId>-->
+            <!--<artifactId>simpleclient_hotspot</artifactId>-->
+            <!--<version>${prom.version}</version>-->
+        <!--</dependency>-->
+        <!--<dependency>-->
+            <!--<groupId>io.prometheus</groupId>-->
+            <!--<artifactId>simpleclient_servlet</artifactId>-->
+            <!--<version>${prom.version}</version>-->
+        <!--</dependency>-->
+        <!--<dependency>-->
+            <!--<groupId>io.prometheus</groupId>-->
+            <!--<artifactId>simpleclient_httpserver</artifactId>-->
+            <!--<version>${prom.version}</version>-->
+        <!--</dependency>-->
+        <!-- https://mvnrepository.com/artifact/io.prometheus/simpleclient_guava -->
+        <dependency>
+            <groupId>io.prometheus</groupId>
+            <artifactId>simpleclient_caffeine</artifactId>
+            <version>${prom.version}</version>
+        </dependency>
+         <!--https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-actuator-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+            <version>2.0.3.RELEASE</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/io.micrometer/micrometer-registry-prometheus -->
+        <dependency>
+            <groupId>io.micrometer</groupId>
+            <artifactId>micrometer-registry-prometheus</artifactId>
+            <version>1.0.5</version>
+        </dependency>
+        <dependency>
+            <groupId>io.micrometer</groupId>
+            <artifactId>micrometer-core</artifactId>
+            <!--<version>1.0.5</version>-->
+        </dependency>
+
+        <!--security -->
+        <!--<dependency>-->
+            <!--<groupId>org.springframework.boot</groupId>-->
+            <!--<artifactId>spring-boot-starter-security</artifactId>-->
+        <!--</dependency>-->
+        <!-- swagger -->
+        <!-- https://mvnrepository.com/artifact/io.springfox/springfox-swagger-ui -->
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger2</artifactId>
+            <version>${swagger.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger-ui</artifactId>
+            <version>${swagger.version}</version>
+            <scope>compile</scope>
+        </dependency>
+
     </dependencies>
 
     <build>
