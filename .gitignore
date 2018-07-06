@@ -6,4 +6,5 @@
 target/
 .mvn
 src/main/resources/application-local.properties
+src/main/resources/data/
 .gradle/

@@ -9,4 +9,6 @@ public interface VideoService {
     ProgramListResponse getTop();
 
     List<Program> getProgramDetailList(List<String> idList);
+
+    List<Program> searchProgram(String genre);
 }
